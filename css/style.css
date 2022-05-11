@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 :root {
   --content-height: 692px;
+  --promo-height: 580px;
+  --gutter-height: 12px;
 }
 body {
   font-family: "Open Sans", sans-serif;
@@ -9,7 +11,7 @@ body {
   width: 100%;
   background-color: #333333;
   height: 48px;
-  min-width: 1024px;
+  /* min-width: 1024px; */
   max-height: 44px;
   position: fixed;
   z-index: 500;
@@ -171,7 +173,7 @@ main section .text-section span a:hover {
 main section.hero .hero-wrap {
   width: 100%;
   height: calc(var(--content-height) + 12px);
-  background-color: tomato;
+  background-color: #fff;
   position: relative;
 }
 
@@ -214,6 +216,7 @@ main section.hero .hero-wrap .herotxt {
   position: relative;
   z-index: 4;
   text-align: center;
+  pointer-events: none;
 }
 
 main section.hero .hero-wrap .herotxt.ipad-air-txt {
@@ -257,24 +260,27 @@ main section.hero .hero-wrap .herotxt.ipad-air-txt .herotitle {
 main section.hero .hero-wrap .herotxt .herosubtitle {
   font-size: 28px;
   font-weight: 400;
-  letter-spacing: 0;
   margin: 10px 0;
   letter-spacing: -3px;
 }
 
 main section.hero .hero-wrap .herotxt.ipad-air-txt .herosubtitle {
-  font-size: 28px;
   line-height: 1.10722;
-  font-weight: 400;
   letter-spacing: 0.004em;
   color: #f5f5f7;
 }
+main section.hero .hero-wrap .herotxt .btn-group{
+    position: relative;
+    z-index: 4;
+}
+
 main section.hero .hero-wrap .herotxt .btn-group .btncommon {
   font-size: 21px;
   font-weight: 400;
   color: #06c;
   position: relative;
   z-index: 4;
+  pointer-events: all;
 }
 main section.hero .hero-wrap .herotxt .btn-group a.btncommon:hover {
   text-decoration: underline;
@@ -324,7 +330,6 @@ main section.hero .hero-wrap-content .hero-content .unit-image-iphone13 {
 
 main
   section.hero
-  .hero-wrap:nth-child(2)
   .hero-wrap-content
   .hero-content
   .unit-image-iphonese {
@@ -343,4 +348,396 @@ main section.hero .hero-wrap-content .hero-content .unit-image-ipad-air {
   background-size: 3008px 736px;
   background-repeat: no-repeat;
   z-index: 1;
+}
+
+/* promo area */
+main section.promo {
+    padding: 0 12px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+main section.promo .promo-wrap {
+    height: calc(var(--promo-height) + var(--gutter-height));
+    background-color: #fff;
+    width: calc(50% - 6px);
+    position: relative;
+    padding-top: 0px;
+    box-sizing: border-box;
+    overflow: visible;
+}
+
+main section.promo .promo-wrap:nth-child(odd){
+    margin-right: 6px;
+}
+
+main section.promo .promo-wrap .promo-wrap-content {
+    height: var(--promo-height);
+    padding-top: 44px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+main section.promo .promo-wrap .promo-wrap-content .promo-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+main section.promo .promo-wrap .promo-wrap-content .promo-content.promo-wwdc-announce, main section.promo .promo-wrap .promo-wrap-content .promo-content.promo-tv-plus-multishow {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+main section.promo .promo-wrap .promo-wrap-content .promo-content a.clickarea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+main section.promo .promo-wrap .promo-wrap-content .promo-content .promotxt {
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: 0em;
+    margin-top: 53px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 5;
+    pointer-events: none;
+}
+
+
+
+main section.promo .promo-wrap .promo-wrap-content .promo-content .promotxt.wwdc-announce-txt .herotitle {
+    background: url(../img/logo/wwdc-announce/wwdc22_logo__f39kr8derwya_large.png) no-repeat;
+    height: 38px;
+    background-size: 203px 38px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+main section.promo .promo-wrap .promo-wrap-content .promo-content .promotxt.watch-series-7-txt .herotitle{
+  background: url(../img/logo/watch-series-7/promo_logo_watch_lte__emrof7zzkriq_large.png) no-repeat;
+  width: 146px;
+  height: 58px;
+  background-size: 146px 58px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto;
+}
+main section.promo .promo-wrap .promo-wrap-content .promo-content .promotxt.tv-plus-multishow-txt .herotitle {
+  background: url(../img/logo/tv-plus-multishow/logo__dcojfwkzna2q_large2.png) no-repeat;
+  width: 84px;
+  height: 33px;
+  background-size: 84px 33px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto;
+}
+
+main section.promo .promo-wrap .promo-wrap-content .promo-content .promotxt.wwdc-announce-txt .herosubtitle {
+  font-size: 21px;
+  font-weight: 400;
+  letter-spacing: .016em;
+  line-height: 1.2381;
+  color: #c6e1e6;
+  margin-top: 15px;
+}
+
+main section.promo .promo-wrap .promo-wrap-content .promo-content .promotxt{
+  margin-top: 10px;
+}
+
+main section.promo .promo-wrap .promo-wrap-content .promo-content .promotxt .herosubtitle{
+  font-size: 21px;
+  line-height: 1.2381;
+  font-weight: 400;
+  letter-spacing: .016em;
+  margin-top: 10px;
+}
+
+
+main section.promo .promo-wrap .promo-wrap-content .promo-content .promotxt.tv-plus-multishow-txt .herosubtitle{
+  color: #fff;
+}
+
+main section.promo .promo-wrap .promo-wrap-content .promo-content .heroimg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: teal;
+    overflow: hidden;
+}
+
+main section.promo .promo-wrap .promo-wrap-content .promo-content .heroimg .unit-image-wwdc-announce {
+    background: url(../img/promo/wwdc-announce/promo_wwdc_announce__dr6w8rxice4i_large.jpg) no-repeat;
+    background-size: cover;
+    width: 1262px;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    position: absolute;
+    z-index: 1
+}
+
+main section.promo .promo-wrap .promo-wrap-content .promo-content .heroimg .unit-image-watch-series-7{
+  background: url(../img/promo/whatch-series-7/promo_watch_lte__djeaso7ukrsm_large.jpg) no-repeat;
+  background-size: cover;
+    width: 1262px;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    position: absolute;
+    z-index: 1
+}
+main section.promo .promo-wrap .promo-wrap-content .promo-content .heroimg .unit-image-iphone13{
+  background: url(../img/promo/iphne13/promo_iphone13_avail__frc36u35m0ii_large.jpg) no-repeat;
+  background-size: cover;
+    width: 1262px;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    position: absolute;
+    z-index: 1
+}
+main section.promo .promo-wrap .promo-wrap-content .promo-content .heroimg .unit-image-studio-display{
+  background: url(../img/promo/studio-display/promo_studiodisplay__b449sh436cdy_large.jpg) no-repeat;
+  background-size: cover;
+    width: 1262px;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    position: absolute;
+    z-index: 1
+}
+main section.promo .promo-wrap .promo-wrap-content .promo-content .heroimg .unit-image-mac-studio{
+  background: url(../img/promo/mac-studio/promo_macstudio__gl7zppziivma_large.jpg) no-repeat;
+  background-size: cover;
+    width: 1262px;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    position: absolute;
+    z-index: 1
+}
+
+main section.promo .promo-wrap .promo-wrap-content .promo-content .heroimg.tv-plus-multishow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+main section.promo .promo-wrap .promo-wrap-content .promo-content .heroimg .unit-image-tv-plus-multishow{
+  background: url(../img/promo/tv-plus-multishow/tile_freeshows__e35b5brgkmi6_xlarge.jpg) no-repeat;
+  background-position: top center;
+  background-size: cover;
+  height: 100%;
+}
+
+main section.promo .promo-wrap .promo-wrap-content .promo-content .promotxt .btn-group {
+ 
+  margin-bottom: 30px;
+}
+
+main section.promo .promo-wrap .promo-wrap-content .promo-content .promotxt .btn-group .btncommon {
+  color: #2997ff;
+  font-size: 17px;
+  font-weight: 400;
+  pointer-events: all;
+}
+
+main section.promo .promo-wrap .promo-wrap-content .promo-content .promotxt .btn-group .btncommon:hover {
+  text-decoration: underline;
+}
+
+main section.promo .promo-wrap:not(:nth-child(1)) .promo-wrap-content .promo-content .promotxt .btn-group .btncommon:last-child {
+  margin-left: 35px;
+
+}
+
+footer#footer {
+  background-color: #f5f5f5;
+  color: #6e6e73;
+  font-size: 12px;
+  height: auto;
+  min-height: 780px;
+}
+
+footer#footer .footer-wrap {
+  max-width: 980px;
+  margin: 0 auto
+}
+
+footer#footer .footer-wrap .information {
+  border-bottom: 1px solid #d2d2d7;
+  padding: 17px 0 11px;
+}
+
+footer#footer .footer-wrap .information li {
+  padding-bottom: 0.8em;
+  letter-spacing: 0em;
+  line-height: 1.33337
+}
+
+footer#footer .footer-wrap .footer-nav {
+  display: flex;
+  /* justify-content: space-between; */
+  padding-top: 20px;
+}
+
+footer#footer .footer-wrap .footer-nav .column {
+  flex-basis: 25%;
+}
+
+footer#footer .footer-wrap .footer-nav .column-section ~ .column-section {
+  padding-top: 24px;
+}
+
+footer#footer .footer-wrap .footer-nav .column-section label {
+  margin-right: 20px;
+  margin-bottom: 0.8em;
+}
+
+footer#footer .footer-wrap .footer-nav .column-section-list .column-section-item {
+  display: block;
+  margin-bottom: 0.8em;
+}
+
+footer#footer .footer-wrap .footer-nav .column-section-list .column-section-item:hover {
+  text-decoration: underline;
+}
+
+footer#footer .footer-wrap .copyright {
+  padding: 34px 0 21px;
+}
+
+footer#footer .footer-wrap .copyright .footer-shop {
+  margin-bottom: 7px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #d2d2d2;
+}
+
+footer#footer .footer-wrap .copyright .footer-shop a {
+  color: #06c;
+  font-weight: bold;
+}
+
+footer#footer .footer-wrap .copyright .footer-shop a:hover {
+  text-decoration: underline;
+}
+
+footer#footer .footer-wrap .copyright .footer-legal {
+  display: flex;
+  margin-bottom: 7px;
+}
+footer#footer .footer-wrap .copyright .footer-legal .footer-legal-copyright {
+  margin-right: 20px;
+}
+footer#footer .footer-wrap .copyright .footer-legal .footer-legal-link a{
+  display: inline-block;
+  margin-right: 5px;
+  position: relative;
+}
+
+footer#footer .footer-wrap .copyright .footer-legal .footer-legal-link a::after{
+  content: '';
+  height: 18px;
+  width: 1px;
+  background-color: #d2d2d7;
+  position: absolute;
+  right: -5px;
+}
+
+@media screen and (max-width: 1069px) {
+  :root {
+    --promo-height: 440px;
+  }
+  main section.hero .hero-wrap-content .hero-content .unit-image-iphone13 {
+    background: url(../img/hero/iphone13/hero_iphone13pro_avail__iy77cld0zwii_mediumtall.jpg) no-repeat;
+    width: 1068px;
+    height: 694px;
+    background-size: 1068px 694px;
+  }
+
+  main section.hero .hero-wrap-content .hero-content .unit-image-iphonese {
+    background: url(../img/hero/iphone-se/hero_iphonese_avail__eg8srhcnpo66_mediumtall.jpg) no-repeat;
+    width: 1068px;
+    height: 694px;
+    background-size: 1068px 694px;
+  }
+
+  main section.hero .hero-wrap .herotxt.iphonesetxt .herotitle {
+    background: url(../img/logo/iphone-se/logo_hero_iphonese__dtb7zrygggeq_mediumtall.png) no-repeat;
+    width: 191px;
+    height: 48px;
+    background-size: 191px 48px;
+  }
+
+  main section.hero .hero-wrap .herotxt.ipad-air-txt .herotitle {
+    background: url(../img/logo/ipad-air/hero_logo_ipadair__em8hublxa0om_mediumtall.png) no-repeat;
+    width: 159px;
+    height: 43px;
+    background-size: 159px 43px;
+  }
+
+  main section.hero .hero-wrap .herotxt.ipad-air-txt {
+    right: unset;
+    padding-top: 63px;
+  }
+
+  main section.hero .hero-wrap-content .hero-content .unit-image-ipad-air {
+    background: url(../img/hero/ipad-air/hero_ipadair__flhdv47anjqu_mediumtall.jpg) no-repeat;
+    width: 1068px;
+    height: 694px;
+    background-size: 1068px 694px;
+  }
+
+  main section.promo .promo-wrap .promo-wrap-content .promo-content .heroimg .unit-image{
+    background-size: cover;
+    width: 516px;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    position: absolute;
+    z-index: 1
+  }
+
+
+  main section.promo .promo-wrap .promo-wrap-content .promo-content .heroimg .unit-image-wwdc-announce {
+    background: url(../img/promo/wwdc-announce/promo_wwdc_announce__dr6w8rxice4i_medium.jpg) no-repeat;
+    width: 516px;
+    height: 490px;
+    width: 100%;
+    background-size: 516px 490px;
+  }
+  main section.hero .hero-wrap .herotxt .herotitle{
+    font-size: 48px;
+  }
+  main section.hero .hero-wrap .herotxt .herosubtitle{
+    font-size: 24px;
+  }
+  
+  main section.hero .hero-wrap .herotxt .btn-group .btncommon {
+    font-size: 19px;
+  }
+  header nav {
+    min-width: 320px
+  }
+
 }
