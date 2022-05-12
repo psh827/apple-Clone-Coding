@@ -18,9 +18,14 @@ body {
 }
 
 #header .nav {
+  position: relative;
   max-width: 980px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+#header .nav .small-nav {
+  display: none;
 }
 
 #header .nav ul {
@@ -56,82 +61,151 @@ body {
 #header .nav ul .apple-nav-item a:hover {
   opacity: 1;
 }
+/* 작은화면 nav */
+#header .nav .small-nav ul .small-nav-item a {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+}
 
-#header .nav ul .apple-nav-item.nav-logo a {
+#header .nav .small-nav ul .small-nav-item label{
+  display: block;
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 0px;
+  left: 5px;
+  /* background: tomato */
+}
+
+#header .nav .small-nav ul .small-nav-item label span.push-bar-line {
+  display: block;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 7px;
+  /* background: black; */
+}
+#header .nav .small-nav ul .small-nav-item label span.push-bar-line.upper{
+  /* top: 12px; */
+  /* left: 5px; */
+}
+#header .nav .small-nav ul .small-nav-item label span.push-bar-line.upper {
+  transform: rotate(45deg);
+}
+
+#header .nav .small-nav ul .small-nav-item label span.push-bar-line.bottom {
+  /* transform: rotate(-45deg); */
+}
+
+#header .nav .small-nav ul .small-nav-item label span.push-bar-line .push-bar-line-content {
+  display: block;
+  width: 17px;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+}
+#header .nav .small-nav ul .small-nav-item label span.push-bar-line .push-bar-line-content.push-bar-line-upper {
+  top: 8px;
+  left: 5px;
+  z-index: 200;
+}
+#header .nav .small-nav ul .small-nav-item label span.push-bar-line .push-bar-line-content.push-bar-line-bottom {
+  bottom: 8px;
+  left: 5px;
+  /* transform: rotate(-45deg); */
+}
+
+#header .nav .small-nav ul .small-nav-item.small-nav-logo a {
   background: url(../img/svg/applelogo_large.svg) no-repeat;
   background-size: 14px 44px;
   background-position: center center;
   width: 14px;
 }
 
-#header .nav ul .apple-nav-item.nav-store a {
+#header .nav .small-nav ul .small-nav-item.small-nav-bag a {
+  background: url(../img/svg/baglogo.svg) no-repeat;
+  background-size: 13px 44px;
+  background-position: center center;
+  width: 13px;
+}
+
+/* 큰화면 nav */
+#header .nav ul.big-width-nav .apple-nav-item.nav-logo a {
+  background: url(../img/svg/applelogo_large.svg) no-repeat;
+  background-size: 14px 44px;
+  background-position: center center;
+  width: 14px;
+}
+
+#header .nav ul.big-width-nav .apple-nav-item.nav-store a {
   background: url(../img/svg/store.svg) no-repeat;
   background-size: 30px 44px;
   background-position: center center;
 }
 
-#header .nav ul .apple-nav-item.nav-mac a {
+#header .nav ul.big-width-nav .apple-nav-item.nav-mac a {
   background: url(../img/svg/mac.svg);
   background-size: 23px 44px;
   width: 23px;
 }
 
-#header .nav ul .apple-nav-item.nav-ipad a {
+#header .nav ul.big-width-nav .apple-nav-item.nav-ipad a {
   background: url(../img/svg/ipad.svg);
   background-size: 24px 44px;
   width: 24px;
 }
 
-#header .nav ul .apple-nav-item.nav-iphone a {
+#header .nav ul.big-width-nav .apple-nav-item.nav-iphone a {
   background: url(../img/svg/iphone.svg);
   background-size: 38px 44px;
   width: 38px;
 }
 
-#header .nav ul .apple-nav-item.nav-watch a {
+#header .nav ul.big-width-nav .apple-nav-item.nav-watch a {
   background: url(../img/svg/watch.svg);
   background-size: 35px 44px;
   width: 35px;
 }
 
-#header .nav ul .apple-nav-item.nav-airpods a {
+#header .nav ul.big-width-nav .apple-nav-item.nav-airpods a {
   background: url(../img/svg/airpods.svg);
   background-size: 43px 44px;
   width: 43px;
 }
 
-#header .nav ul .apple-nav-item.nav-tvhome a {
+#header .nav ul.big-width-nav .apple-nav-item.nav-tvhome a {
   background: url(../img/svg/tvhome.svg);
   background-size: 42px 44px;
   width: 42px;
 }
 
-#header .nav ul .apple-nav-item.nav-onlyapple a {
+#header .nav ul.big-width-nav .apple-nav-item.nav-onlyapple a {
   background: url(../img/svg/onlyapple.svg);
   background-size: 80px 44px;
   width: 80px;
 }
 
-#header .nav ul .apple-nav-item.nav-accessories a {
+#header .nav ul.big-width-nav .apple-nav-item.nav-accessories a {
   background: url(../img/svg/accessories.svg);
   background-size: 40px 44px;
   width: 40px;
 }
 
-#header .nav ul .apple-nav-item.nav-support a {
+#header .nav ul.big-width-nav .apple-nav-item.nav-support a {
   background: url(../img/svg/support.svg);
   background-size: 39px 44px;
   width: 39px;
 }
 
-#header .nav ul .apple-nav-item.nav-search a {
+#header .nav ul.big-width-nav .apple-nav-item.nav-search a {
   background: url(../img/svg/searchlogo.svg) no-repeat;
   background-size: 15px 88px;
   width: 15px;
   background-position: 0px 0px;
 }
 
-#header .nav ul .apple-nav-item.nav-bag a {
+#header .nav ul.big-width-nav .apple-nav-item.nav-bag a {
   background: url(../img/svg/baglogo.svg) no-repeat;
   background-size: 13px 44px;
   background-position: center center;
@@ -424,7 +498,6 @@ main section.promo .promo-wrap .promo-wrap-content .promo-content .promotxt.wwdc
     background-size: 203px 38px;
     background-repeat: no-repeat;
     background-position: center;
-
 }
 
 main section.promo .promo-wrap .promo-wrap-content .promo-content .promotxt.watch-series-7-txt .herotitle{
@@ -447,7 +520,6 @@ main section.promo .promo-wrap .promo-wrap-content .promo-content .promotxt.tv-p
 }
 
 main section.promo .promo-wrap .promo-wrap-content .promo-content .promotxt.wwdc-announce-txt .herosubtitle {
-  font-size: 21px;
   font-weight: 400;
   letter-spacing: .016em;
   line-height: 1.2381;
@@ -551,8 +623,7 @@ main section.promo .promo-wrap .promo-wrap-content .promo-content .heroimg .unit
 }
 
 main section.promo .promo-wrap .promo-wrap-content .promo-content .promotxt .btn-group {
- 
-  margin-bottom: 30px;
+  margin: -10px 0 30px;
 }
 
 main section.promo .promo-wrap .promo-wrap-content .promo-content .promotxt .btn-group .btncommon {
@@ -566,7 +637,7 @@ main section.promo .promo-wrap .promo-wrap-content .promo-content .promotxt .btn
   text-decoration: underline;
 }
 
-main section.promo .promo-wrap:not(:nth-child(1)) .promo-wrap-content .promo-content .promotxt .btn-group .btncommon:last-child {
+main section.promo .promo-wrap:not(:nth-child(1), :last-child) .promo-wrap-content .promo-content .promotxt .btn-group .btncommon:last-child {
   margin-left: 35px;
 
 }
@@ -605,11 +676,16 @@ footer#footer .footer-wrap .footer-nav .column {
   flex-basis: 25%;
 }
 
+footer#footer .footer-wrap .footer-nav .column input {
+  display: none;
+}
+
 footer#footer .footer-wrap .footer-nav .column-section ~ .column-section {
   padding-top: 24px;
 }
 
 footer#footer .footer-wrap .footer-nav .column-section label {
+  display: block;
   margin-right: 20px;
   margin-bottom: 0.8em;
 }
@@ -664,6 +740,10 @@ footer#footer .footer-wrap .copyright .footer-legal .footer-legal-link a::after{
   right: -5px;
 }
 
+footer#footer .footer-wrap .copyright .footer-legal .footer-legal-link a:last-child:after {
+  display: none;
+}
+
 @media screen and (max-width: 1069px) {
   :root {
     --promo-height: 440px;
@@ -713,8 +793,6 @@ footer#footer .footer-wrap .copyright .footer-legal .footer-legal-link a::after{
     width: 516px;
     width: 100%;
     height: 100%;
-    background-position: center center;
-    position: absolute;
     z-index: 1
   }
 
@@ -724,20 +802,192 @@ footer#footer .footer-wrap .copyright .footer-legal .footer-legal-link a::after{
     width: 516px;
     height: 490px;
     width: 100%;
+    background-position: center center;
     background-size: 516px 490px;
   }
+
+  main section.promo .promo-wrap .promo-wrap-content .promo-content .promotxt.wwdc-announce-txt .herotitle {
+    background: url(../img/logo/wwdc-announce/wwdc22_logo__f39kr8derwya_medium.png) no-repeat;
+    height: 30px;
+    background-size: 164px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+  main section.promo .promo-wrap .promo-wrap-content .promo-content .heroimg .unit-image-watch-series-7 {
+    background: url(../img/promo/whatch-series-7/promo_watch_lte__djeaso7ukrsm_medium.jpg) no-repeat;
+    background-position: center bottom;
+    background-size: 516px 490px;
+  }
+
+  main section.promo .promo-wrap .promo-wrap-content .promo-content .promotxt.promotxt.watch-series-7-txt .herotitle {
+    background: url(../img/logo/watch-series-7/promo_logo_watch_lte__emrof7zzkriq_medium.png) no-repeat;
+    height: 45px;
+    background-size: 118px 45px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+  main section.promo .promo-wrap .promo-wrap-content .promo-content .heroimg .unit-image-iphone13 {
+    background: url(../img/promo/iphne13/promo_iphone13_avail__frc36u35m0ii_medium.jpg) no-repeat;
+    background-position: center bottom;
+    background-size: 516px 490px;
+  }
+
+  main section.promo .promo-wrap .promo-wrap-content .promo-content .heroimg .unit-image-studio-display {
+    background: url(../img/promo/studio-display/promo_studiodisplay__b449sh436cdy_medium.jpg) no-repeat;
+    background-position: center bottom;
+    background-size: 516px 490px;
+  }
+
+  main section.promo .promo-wrap .promo-wrap-content .promo-content .heroimg .unit-image-mac-studio {
+    background: url(../img/promo/mac-studio/promo_macstudio__gl7zppziivma_medium.jpg) no-repeat;
+    background-position: center bottom;
+    background-size: 516px 490px;
+  }
+
+  main section.promo .promo-wrap .promo-wrap-content .promo-content .heroimg .unit-image-tv-plus-multishow {
+    background: url(../img/promo/tv-plus-multishow/tile_freeshows__e35b5brgkmi6_medium.jpg) no-repeat;
+    top: 44px;
+    background-size: cover;
+    background-position: top center;
+    width: calc(100% + 2px);
+    height: 100%;
+  }
+
   main section.hero .hero-wrap .herotxt .herotitle{
     font-size: 48px;
   }
   main section.hero .hero-wrap .herotxt .herosubtitle{
     font-size: 24px;
   }
-  
+
+  main section.promo .promo-wrap .promo-wrap-content .promo-content .promotxt .herosubtitle {
+    font-size: 16px;
+  }
+
   main section.hero .hero-wrap .herotxt .btn-group .btncommon {
     font-size: 19px;
   }
+
+  main section.promo .promo-wrap .promo-wrap-content .promo-content .promotxt .btn-group .btncommon{
+    font-size: 14px;
+  }
+
+  main section.promo .promo-wrap .promo-wrap-content .promo-content .promotxt{
+    margin-top: -30px;
+  }
+
   header nav {
     min-width: 320px
+  }
+}
+
+@media screen and (max-width: 833px) {
+  #header .nav .small-nav {
+    display: block;
+  }
+
+  #header .nav ul.big-width-nav {
+    display: none;
+  }
+
+  footer#footer {
+    overflow-y: hidden;
+  }
+
+  footer#footer .footer-wrap {
+    padding-left: max(16px,env(safe-area-inset-left));
+    padding-right: max(16px,env(safe-area-inset-right));
+  }
+
+  footer#footer .footer-wrap .footer-nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer#footer .footer-wrap .footer-nav .column .column-section{
+    padding-top: 10px;
+    position: relative;
+    border-bottom: 1px solid #d2d2d7;
+    cursor: pointer;
+  }
+
+  footer#footer .footer-wrap .footer-nav .column-section label h3 {
+    font-size: 12px;
+    font-weight: 400;
+    color: #6e6e73;
+  }
+
+  footer#footer .footer-wrap .footer-nav .column-section label h3:after {
+    content: '+';
+    float: right;
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: -2px;
+    margin-right: 8px;
+    transition: transform .3s ease, -webkit-transform .3s ease;
+  }
+
+  footer#footer .footer-wrap .footer-nav .column:not(:nth-child(2), :nth-child(4), :nth-child(5)) input[type=checkbox]:checked ~ .column-section label h3:after {
+    transform: rotate(45deg) scale(1.08);
+  }
+  footer#footer .footer-wrap .footer-nav .column input[type=checkbox]#service:checked ~ .column-section label[for=service] h3:after,
+  footer#footer .footer-wrap .footer-nav .column input[type=checkbox]#account:checked ~ .column-section label[for=account] h3:after,
+  footer#footer .footer-wrap .footer-nav .column input[type=checkbox]#business:checked ~ .column-section label[for=business] h3:after,
+  footer#footer .footer-wrap .footer-nav .column input[type=checkbox]#education:checked ~ .column-section label[for=education] h3:after,
+  footer#footer .footer-wrap .footer-nav .column input[type=checkbox]#mental:checked ~ .column-section label[for=mental] h3:after,
+  footer#footer .footer-wrap .footer-nav .column input[type=checkbox]#information:checked ~ .column-section label[for=information] h3:after {
+    transform: rotate(45deg) scale(1.08);
+  }
+
+  footer#footer .footer-wrap .footer-nav .column-section-list{
+    margin: 0;
+    overflow: hidden;
+    padding-top: 5px;
+    padding-bottom: 16px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    visibility: hidden;
+    z-index: -1;
+    transform: translateY(-5px);
+  }
+
+
+  footer#footer .footer-wrap .footer-nav .column:not(:nth-child(2), :nth-child(4), :nth-child(5)) input[type=checkbox]:checked ~ .column-section label + .column-section-list{
+    position: static;
+    visibility: visible;
+    z-index: 1;
+    transform: none;
+    transition: transform 300ms ease, -webkit-transform 300ms ease;
+  }
+
+  footer#footer .footer-wrap .footer-nav .column input[type=checkbox]#service:checked ~ .column-section label[for=service] + .column-section-list,
+  footer#footer .footer-wrap .footer-nav .column input[type=checkbox]#account:checked ~ .column-section label[for=account] + .column-section-list,
+  footer#footer .footer-wrap .footer-nav .column input[type=checkbox]#business:checked ~ .column-section label[for=business] + .column-section-list,
+  footer#footer .footer-wrap .footer-nav .column input[type=checkbox]#education:checked ~ .column-section label[for=education] + .column-section-list,
+  footer#footer .footer-wrap .footer-nav .column input[type=checkbox]#mental:checked ~ .column-section label[for=mental] + .column-section-list,
+  footer#footer .footer-wrap .footer-nav .column input[type=checkbox]#information:checked ~ .column-section label[for=information] + .column-section-list {
+    position: static;
+    visibility: visible;
+    z-index: 1;
+    transform: none;
+    transition: transform 300ms ease, -webkit-transform 300ms ease;
+  }
+  footer#footer .footer-wrap .footer-nav .column-section-list .column-section-item {
+    text-indent: 1.5em;
+  }
+
+  footer#footer .footer-wrap .copyright .footer-shop {
+    border-bottom: none;
+  }
+
+  footer#footer .copyright .footer-legal {
+    display: flex;
+    flex-direction: column;
   }
 
 }
