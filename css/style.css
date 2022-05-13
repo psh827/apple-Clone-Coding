@@ -26,6 +26,7 @@ body {
 
 #header .nav .small-nav {
   display: none;
+  height: 48px;
 }
 
 #header .nav ul {
@@ -34,7 +35,7 @@ body {
 }
 
 #header .nav ul .apple-nav-item {
-  display: inline-block;
+  display: block;
   height: 44px;
   line-height: 3.6667px;
 }
@@ -62,19 +63,25 @@ body {
   opacity: 1;
 }
 /* 작은화면 nav */
+#header .nav .small-nav ul .small-nav-item {
+  height: 44px;
+}
 #header .nav .small-nav ul .small-nav-item a {
   display: inline-block;
   width: 44px;
   height: 44px;
 }
+#header .nav input#push-bar-label {
+  display: none;
+}
 
 #header .nav .small-nav ul .small-nav-item label{
   display: block;
   width: 48px;
-  height: 48px;
+  height: 44px;
   position: absolute;
   top: 0px;
-  left: 5px;
+  left: 0px;
   /* background: tomato */
 }
 
@@ -84,19 +91,45 @@ body {
   width: 30px;
   position: absolute;
   top: 7px;
+  left: 5px;
   /* background: black; */
+  transition: transform .1806s ease-in-out;
 }
-#header .nav .small-nav ul .small-nav-item label span.push-bar-line.upper{
-  /* top: 12px; */
-  /* left: 5px; */
-}
-#header .nav .small-nav ul .small-nav-item label span.push-bar-line.upper {
+#header .nav input[type=checkbox]#push-bar-label:checked ~ .small-nav ul li.small-nav-item label span.push-bar-line.upper {
   transform: rotate(45deg);
+  /* transition: transform .1596s */
 }
 
-#header .nav .small-nav ul .small-nav-item label span.push-bar-line.bottom {
-  /* transform: rotate(-45deg); */
+#header .nav input[type=checkbox]#push-bar-label:checked ~ .small-nav ul li.small-nav-item label span.push-bar-line.bottom {
+  transform: rotate(-45deg);
+  transition: transform .1596s
 }
+#header .nav input[type=checkbox]#push-bar-label:checked ~ .small-nav ul li.small-nav-item label span.push-bar-line .push-bar-line-content.push-bar-line-upper {
+  top: 14px;
+  left: 7px;
+  z-index: 200;
+  transition: transform .1596s
+}
+#header .nav .small-nav ul .small-nav-item  label span.push-bar-line .push-bar-line-content.push-bar-line-upper {
+  top: 10px;
+  left: 7px;
+  transition: transform .1596s
+
+}
+
+#header .nav .small-nav label span.push-bar-line .push-bar-line-content.push-bar-line-bottom{
+  bottom: 10px;
+  left: 7px;
+
+}
+
+#header .nav input[type=checkbox]#push-bar-label:checked ~ .small-nav ul li.small-nav-item label span.push-bar-line .push-bar-line-content.push-bar-line-bottom {
+  bottom: 14px;
+  left: 7px;
+}
+
+
+
 
 #header .nav .small-nav ul .small-nav-item label span.push-bar-line .push-bar-line-content {
   display: block;
@@ -105,16 +138,11 @@ body {
   background: #fff;
   position: absolute;
 }
-#header .nav .small-nav ul .small-nav-item label span.push-bar-line .push-bar-line-content.push-bar-line-upper {
-  top: 8px;
-  left: 5px;
-  z-index: 200;
+
+#header .nav .small-nav ul .small-nav-item.small-nav-bag {
+  margin-right: 10px;
 }
-#header .nav .small-nav ul .small-nav-item label span.push-bar-line .push-bar-line-content.push-bar-line-bottom {
-  bottom: 8px;
-  left: 5px;
-  /* transform: rotate(-45deg); */
-}
+
 
 #header .nav .small-nav ul .small-nav-item.small-nav-logo a {
   background: url(../img/svg/applelogo_large.svg) no-repeat;
@@ -222,7 +250,7 @@ main {
 main section:nth-child(1) {
   background-color: #f5f5f7;
   position: relative;
-  z-index: 40;
+  z-index: 4;
 }
 
 main section .text-section {
@@ -885,13 +913,118 @@ footer#footer .footer-wrap .copyright .footer-legal .footer-legal-link a:last-ch
 }
 
 @media screen and (max-width: 833px) {
+  #header .nav{
+    width: 100%;
+    padding: 0;
+  }
+
   #header .nav .small-nav {
     display: block;
+    background-color: black;
   }
+
+  /*검색창*/
+#header .nav .search-area {
+  display: block;
+    position: absolute;
+    z-index: 4;
+    top: 48px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0 10px 0 10px;
+    box-sizing: border-box;
+    height: 3.11765em;
+    background-color: black;
+    border-bottom: 1px solid #424245;
+}
+
+#header .nav .search-area .search-inner {
+  margin: 0;
+    padding: 0;
+    height: 2.11765em;
+}
+
+#header .nav .search-area .search-inner .inner-area-point {
+  display: block;
+  height: 2.11765em;
+  max-width: 584px;
+  margin: 0 auto;
+  padding: 0;
+  outline-offset: 0;
+  opacity: 1;
+  background-color: #1D1D1F;
+}
+
+#header .nav .search-area .search-inner .inner-area-point .inner-area-div {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  max-width: 584px;
+  margin: 0 auto;
+  height: 36px;
+}
+
+#header .nav .search-area .search-inner .inner-area-point .inner-area-div .inner-area-left {
+  position: relative;
+  z-index: 3;
+  flex: 1;
+  line-height: 2.11765em;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+#header .nav .search-area .search-inner .inner-area-point .inner-area-div .inner-area-right {
+  display: block;
+  right: auto;
+  position: relative;
+  opacity: 1;
+  width: auto;
+  height: 36px;
+  padding: 0 8px;
+  margin-left: 10px;
+}
+
+/* ul */
 
   #header .nav ul.big-width-nav {
     display: none;
   }
+
+  #header .nav input[type=checkbox]#push-bar-label:checked ~ ul.big-width-nav {
+    background-color: black;
+    position: absolute;
+    top: 45pxpx;
+    display: block;
+    /* max-width: 664px; */
+    width: 100%;
+    margin: 0 auto;
+    padding: 45px 40px 8px;
+    height: 100vh;
+  }
+
+  #header .nav input[type=checkbox]#push-bar-label:checked ~ ul.big-width-nav .apple-nav-item.nav-logo,
+  #header .nav input[type=checkbox]#push-bar-label:checked ~ ul.big-width-nav .apple-nav-item.nav-search,
+  #header .nav input[type=checkbox]#push-bar-label:checked ~ ul.big-width-nav .apple-nav-item.nav-bag {
+    display: none;
+  }
+
+  #header .nav input[type=checkbox]#push-bar-label:checked ~ ul.big-width-nav .apple-nav-item {
+    height: 44px;
+    border-bottom: 1px solid #424245;
+  }
+  #header .nav ul.big-width-nav .apple-nav-item.nav-store a {
+    background: url(../img/svg/833navlogo/store.svg) no-repeat;
+    background-size: 41px 43px;
+    background-position: left center;
+    display: block;
+    width: auto;
+  }
+
+
+  /********************/
 
   footer#footer {
     overflow-y: hidden;
