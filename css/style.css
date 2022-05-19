@@ -159,6 +159,10 @@ input[type=checkbox]#push-bar-label:checked ~ #header .nav .small-nav ul li.smal
   width: 13px;
 }
 
+#header .nav .search-area {
+  display: none;
+}
+
 /* 큰화면 nav */
 #header .nav ul.big-width-nav .apple-nav-item.nav-logo a {
   background: url(../img/svg/applelogo_large.svg) no-repeat;
@@ -948,6 +952,10 @@ footer#footer .footer-wrap .copyright .footer-legal .footer-legal-link a:last-ch
     border-bottom: 1px solid #424245;
   }
   
+  input[type=checkbox]#push-bar-label:checked ~ #header .nav .search-area {
+    display: block;
+  }
+  
   #header .nav .search-area .search-inner {
     margin: 0;
     padding: 0;
@@ -963,6 +971,7 @@ footer#footer .footer-wrap .copyright .footer-legal .footer-legal-link a:last-ch
     outline-offset: 0;
     opacity: 1;
     background-color: #1D1D1F;
+    border-radius: 12px;
   }
   input[type=checkbox]#push-bar-label:checked ~ #header .nav .search-area {
     visibility: visible;
@@ -988,6 +997,7 @@ footer#footer .footer-wrap .copyright .footer-legal .footer-legal-link a:last-ch
   overflow: hidden;
   border-radius: 8px;
   color: #6e6e73;
+  padding-left: 30px;
 }
 
 #header .nav .search-area .search-inner .inner-area-point .inner-area-div .inner-area-left .inner-area-search-logo {
@@ -1021,15 +1031,13 @@ footer#footer .footer-wrap .copyright .footer-legal .footer-legal-link a:last-ch
 
   input[type=checkbox]#push-bar-label:checked ~ #header .nav ul.big-width-nav {
     background-color: black;
-    /* position: absolute; */
     top: 55px;
     visibility: visible;
     flex-direction: column;
     justify-content: initial;
     max-width: 664px;
-    /* width: 100%; */
     margin: 0 auto;
-    padding: 45px 40px 8px;
+    padding: 50px 40px 8px;
     box-sizing: border-box;
     height: 100vh;
     transition: 1s;
