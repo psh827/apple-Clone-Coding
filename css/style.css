@@ -12,7 +12,6 @@ body {
   width: 100%;
   background-color: #333333;
   height: 48px;
-  /* min-width: 1024px; */
   max-height: 44px;
   position: fixed;
   z-index: 500;
@@ -150,6 +149,7 @@ input[type=checkbox]#push-bar-label:checked ~ #header .nav .small-nav ul li.smal
   background-size: 14px 44px;
   background-position: center center;
   width: 14px;
+  opacity: .8;
 }
 
 #header .nav .small-nav ul .small-nav-item.small-nav-bag a {
@@ -246,6 +246,7 @@ main {
   max-width: 2560px;
   margin: 0 auto;
   padding-top: 44px;
+  overflow-x: hidden;
 }
 
 main section:nth-child(1) {
@@ -921,8 +922,9 @@ footer#footer .footer-wrap .copyright .footer-legal .footer-legal-link a:last-ch
     background-color: black;
   }
   input[type=checkbox]#push-bar-label:checked ~ #header .nav {
-    height: auto;
+    height: 100vh;
     transition: 1s;
+    overflow-y: hidden;
   }
 
   #header .nav .small-nav {
@@ -985,6 +987,18 @@ footer#footer .footer-wrap .copyright .footer-legal .footer-legal-link a:last-ch
   padding: 0;
   overflow: hidden;
   border-radius: 8px;
+  color: #6e6e73;
+}
+
+#header .nav .search-area .search-inner .inner-area-point .inner-area-div .inner-area-left .inner-area-search-logo {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 0;
+  left: 8px;
+  background-size: 14px 74px;
+  background-image: url(../img/svg/searchlogo.svg);
+  background-repeat: no-repeat;
 }
 
 #header .nav .search-area .search-inner .inner-area-point .inner-area-div .inner-area-right {
@@ -1025,6 +1039,10 @@ footer#footer .footer-wrap .copyright .footer-legal .footer-legal-link a:last-ch
   input[type=checkbox]#push-bar-label:checked ~ #header .nav ul.big-width-nav .apple-nav-item.nav-search,
   input[type=checkbox]#push-bar-label:checked ~ #header .nav ul.big-width-nav .apple-nav-item.nav-bag {
     display: none;
+  }
+
+  input[type=checkbox]#push-bar-label:checked ~ #header .nav .small-nav ul li.small-nav-bag {
+    visibility: hidden;
   }
   #header .nav ul.big-width-nav .apple-nav-item {
     opacity: 0;
@@ -1221,6 +1239,25 @@ footer#footer .footer-wrap .copyright .footer-legal .footer-legal-link a:last-ch
     --promo-height: 500px;
     /* --promo-nav: 48px; */
   }
+  main section.hero .hero-wrap .herotxt {
+    top: -30px;
+  }
+  main section.hero .hero-wrap-content .hero-content .herotxt .herotitle {
+    font-size: 32px;
+  }
+
+  main section.hero .hero-wrap-content .hero-content .herotxt .herosubtitle {
+    font-size: 19px;
+  }
+
+  main section.hero .hero-wrap .herotxt .btn-group .btncommon {
+    font-size: 17px;
+  }
+
+  main section.hero .hero-wrap .herotxt > span {
+    font-size: 14px;
+  }
+
   main section.hero .hero-wrap-content .hero-content .unit-image-iphone13 {
     background: url(../img/hero/iphone13/hero_iphone13pro_avail__iy77cld0zwii_small.jpg) no-repeat;
     width: 734px;
@@ -1228,11 +1265,19 @@ footer#footer .footer-wrap .copyright .footer-legal .footer-legal-link a:last-ch
     background-size: 734px 548px;
   }
 
+
   main section.hero .hero-wrap-content .hero-content .unit-image-iphonese {
     background: url(../img/hero/iphone-se/hero_iphonese_avail__eg8srhcnpo66_small.jpg) no-repeat;
     width: 734px;
     height: 548px;
     background-size: 734px 548px;
+  }
+
+  main section.hero .hero-wrap .herotxt.iphonesetxt .herotitle {
+    background: url(../img/logo/iphone-se/logo_hero_iphonese__dtb7zrygggeq_small.png) no-repeat;
+    height: 32px;
+    background-size: 126px 32px;
+    width: 126px;
   }
 
   main section.hero .hero-wrap-content .hero-content .unit-image-ipad-air {
@@ -1242,10 +1287,25 @@ footer#footer .footer-wrap .copyright .footer-legal .footer-legal-link a:last-ch
     background-size: 734px 548px;
   }
 
+  main section.hero .hero-wrap .herotxt.ipad-air-txt .herotitle {
+    background: url(../img/logo/ipad-air/hero_logo_ipadair__em8hublxa0om_small.png) no-repeat;
+    height: 30px;
+    width: 112px;
+    background-size: 112px 30px;
+  }
+
+  main section.hero .hero-wrap .herotxt.ipad-air-txt {
+    padding-top: 35px;
+  }
   /* promo */
   main section.promo .promo-wrap {
     flex: 100%;
   }
+
+  main section.promo .promo-wrap .promo-wrap-content .promo-content .promotxt {
+    font-size: 32px;
+  }
+
   main section.promo .promo-wrap .promo-wrap-content .promo-content .heroimg .unit-image-wwdc-announce {
     background: url(../img/promo/wwdc-announce/promo_wwdc_announce__dr6w8rxice4i_small.jpg) no-repeat;
     width: 734px;
@@ -1301,5 +1361,8 @@ footer#footer .footer-wrap .copyright .footer-legal .footer-legal-link a:last-ch
     width: 100%;
     background-position: top center;
     background-size: cover
+  }
+  main section.promo .promo-wrap .promo-wrap-content .promo-content .promotxt {
+    margin-top: 0;
   }
 }
